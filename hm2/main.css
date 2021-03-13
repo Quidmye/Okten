@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    border: 2px solid grey;
+    padding: 10px;
+}
+.box1{
+    background-color: #f0f8ff;
+}
+.box1 a{
+    color: black;
+}
+.box2{
+    background-color: azure;
+}
