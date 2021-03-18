@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+}
+.header{
+    height: 50px;
+    background: aliceblue;
+}
+.nav{
+    background: azure;
+}
+.content{
+    display: flex;
+}
+.article{
+    width: 70%;
+    background: honeydew;
+}
+.aside{
+    width: 30%;
+    background: cyan;
+}
+.footer{
+    height: 50px;
+    background: beige;
+}
