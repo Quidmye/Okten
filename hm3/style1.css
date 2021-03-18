@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+}
+.main{
+    width: 100%;
+    height: 700px;
+    background: aliceblue;
+}
+.header{
+    width: 100%;
+    height: 100px;
+    background: aquamarine;
+}
+.wrap{
+    display: flex;
+}
+.box-center{
+    width: 75%;
+    background: bisque;
+    height: 600px;
+}
+.box-right{
+    width: 25%;
+    background: coral;
+    height: 600px;
+}
