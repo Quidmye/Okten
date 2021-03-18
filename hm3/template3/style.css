@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+}
+.main{
+    width: 100%;
+    height: 700px;
+    background: azure;
+}
+.header{
+    width: 100%;
+    height: 100px;
+    background: coral;
+}
+.flex{
+    display: flex;
+}
+.center{
+    width: 80%;
+    height: 600px;
+    background: cadetblue;
+    flex-wrap: wrap;
+}
+.right{
+    width: 20%;
+    height: 600px;
+    background: chartreuse;
+}
+.box{
+    height: 50%;
+    width: 33.33333333%;
+    background: aliceblue;
+}
+.box-b{
+    background: crimson;
+}
+.box-c{
+    background: dimgray;
+}
+.box-d{
+    background: darkblue
+}
+.box-e{
+    background: coral;
+}
+.box-f{
+    background: brown;
+}
