@@ -13,24 +13,18 @@ function arrayWithRandomNumbers(numOfItems = 10, min = -999, max = 999) {
 }
 
 //3) створити функцію яка приймає три числа та виводить найменьше. (Без Math.min!)
-function getMin() {
-    let result = Infinity;
-    for (let i = 0; i < 3; i++) {
-        if (arguments[i] < result) {
-            result = arguments[i];
-        }
-    }
+function getMin(num1, num2, num3) {
+    let result = num1;
+    result = num2 < result ? num2 : result;
+    result = num3 < result ? num3 : result;
     console.log(result);
 }
 
 // 4) створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!)
-function getMin() {
-    let result = Infinity;
-    for (let i = 0; i < 3; i++) {
-        if (arguments[i] > result) {
-            result = arguments[i];
-        }
-    }
+function getMax(num1, num2, num3) {
+    let result = num1;
+    result = num2 > result ? num2 : result;
+    result = num3 > result ? num3 : result;
     console.log(result);
 }
 
