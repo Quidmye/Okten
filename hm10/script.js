@@ -169,8 +169,3 @@ function nameToLongForWrite(max, min) {
     }
     return result;
 }
-console.time('TEST');
-console.log(nameToLongForWrite(99999, 9999));
-console.timeEnd('TEST');
-
-
