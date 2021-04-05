@@ -134,7 +134,7 @@ function printText(text) {
     write();
 }
 
-
+//Знайти найблільше число поліндром яке утворюється завдяки добутку двох простих пятизначних чисел.
 function nameToLongForWrite(max, min) {
     //Шукаю прості числа до max
     let primeNumbers = Array.from(Array(max-2).keys()).map(x => x+2);
