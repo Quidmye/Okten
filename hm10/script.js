@@ -137,10 +137,7 @@ function printText(text) {
 
 function nameToLongForWrite(max, min) {
     //Шукаю прості числа до max
-    let primeNumbers = [];
-    for (i = 2; i < max; i++) {
-        primeNumbers.push(i);
-    }
+    let primeNumbers = Array.from(Array(max-2).keys()).map(x => x+2);
     for (i = 0; i < primeNumbers.length; i++) {
         primeNumbers = primeNumbers.filter((word) => {
             return word === primeNumbers[i] || word % primeNumbers[i] !== 0;
@@ -152,8 +149,8 @@ function nameToLongForWrite(max, min) {
     });
     //Множу все на все і сортую по величині
     let arrayOfResults = [];
-    for (i = primeNumbers.length-1; i >= 0; i--) {
-        for (e = primeNumbers.length-1; e >= 0; e--) {
+    for (i = primeNumbers.length - 1; i >= 0; i--) {
+        for (e = primeNumbers.length - 1; e >= 0; e--) {
             arrayOfResults.push(primeNumbers[i] * primeNumbers[e]);
         }
     }
@@ -161,11 +158,13 @@ function nameToLongForWrite(max, min) {
 
     //Шукаю поліндром
     let result;
-    for(item of arrayOfResults){
-        if(item.toString() === item.toString().split('').reverse().join('')){
-           result = item;
-           break;
+    for (item of arrayOfResults) {
+        if (item.toString() === item.toString().split('').reverse().join('')) {
+            result = item;
+            break;
         }
     }
     return result;
 }
+
+console.log(nameToLongForWrite(99999, 9999));
