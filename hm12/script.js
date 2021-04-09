@@ -20,7 +20,7 @@ number.forEach(value => document.write(value));
 number.map(value => value * 3);
 
 // g) Порахувати загальну суму всіх елментів у масиві (reduce)
-number.reduce((acc, value) => acc += value);
+number.reduce((acc, value) => acc + value);
 
 // 2) Створити масив з 20 стрічок та:
 let strings = ['number', 'sort', 'filter', 'forEach', 'console', 'reduce', 'Відфілтрувати', 'допомогою', 'збільшити', 'document',
@@ -274,7 +274,7 @@ usersWithAddress.filter(value => value.isMarried && value.age < 30)
 usersWithAddress.filter(value => value.address.number % 2 === 0)
 
 //-- Порахувати загальний вік всіх людей. (reduce)
-usersWithAddress.reduce((acc, value) => acc += value.age, 0);
+usersWithAddress.reduce((acc, value) => acc + value.age, 0);
 
 //-- Ті, хто одружений і старий за 30 має отримати обєкти child і попасти в новий масив (reduce)
 usersWithAddress.reduce((acc, value) => {
