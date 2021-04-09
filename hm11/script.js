@@ -25,7 +25,7 @@ class compuktor {
 // У нього зявляється нова змінна роботи батареї. Ця змінна визначається як потужність / (дюйми * оперативку)
 
 class laptop extends compuktor {
-    constructor(screen) {
+    constructor(ram, core, name, screen) {
         super(ram, core, name);
         this.screen = screen;
         this.battery = screen * ram;
@@ -36,7 +36,7 @@ class laptop extends compuktor {
 // Він має нову змінну ваги.
 // При включенні ультрабуку має видаватися помилка, якшо вага більша за 2кг та батарея тримаж менше ніж 4 години.
 class ultrabook extends laptop {
-    constructor(weight) {
+    constructor(ram, core, name, screen, weight) {
         super(screen);
         this.weight = weight;
     }
@@ -60,7 +60,7 @@ class ultrabook extends laptop {
 // Оперативку можна збільшити лише в 2 рази. Зменшувати її не можна.
 // Для зміни характеритик мають бути свої методи. Мняти змінну "в лоб" заборонено.
 class PC extends compuktor {
-    constructor() {
+    constructor(ram, core, name) {
         super(ram, core, name);
         this.fps = this.cor / this.ram;
     }
@@ -90,8 +90,8 @@ class PC extends compuktor {
 // що на цьому відрі ігри не запускаються.
 
 class gamingPC extends PC {
-    constructor() {
-        super();
+    constructor(ram, core, name) {
+        super(ram, core, name);
         this.fps *= 2;
     }
 
