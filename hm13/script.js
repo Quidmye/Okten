@@ -93,6 +93,8 @@ function generateTable(tr, td, element){
     element.appendChild(table);
 }
 generateTable(4, 5, document.body)
+
+//- Напишіть «Карусель» – стрічку зображень, яку можна гортати вліво-вправо нажаттям на стрілочки.
 let images = [
     {
         src: 'img/index.jpg',
