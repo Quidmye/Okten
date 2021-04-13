@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+        }
+        div#carusel{
+            display: flex;
+            flex-direction: row;
+        }
+        #buttonLeft, #buttonRight{
+            width: 50px;
+            line-height: 200px;
+            color: white;
+            height: 250px;
+        }
+        div#carusel img, #image{
+            width: 300px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+<div id="text">TEXT</div>
+<button name="text">Скрыть #text</button>
+
+<form name="checkAge">
+    <input type="text" name="age" placeholder="Ваш возраст">
+    <input type="submit" value="сохранить">
+</form>
+
+<button id="showOrHideMenu">Скрыть</button>
+<ul id="menu">
+    <li>МЕНЮ 1</li>
+    <li>МЕНЮ 2</li>
+    <li>МЕНЮ 3</li>
+    <li>МЕНЮ 4</li>
+    <li>МЕНЮ 5</li>
+</ul>
+<form name="form1">
+    <input type="text" name="oneOne" placeholder="text one one" />
+    <input type="text" name="oneTwo" placeholder="text one two" />
+</form>
+<form name="form2">
+    <input type="text" name="twoOne" placeholder="text two one" />
+    <input type="text" name="twoTwo" placeholder="text two two" />
+</form>
+<button id="forms">Показать информацию</button>
+<hr>
+<div id="carusel">
+    <div id="buttonLeft"><-</div>
+    <div id="image"><img></div>
+    <div id="buttonRight">-></div>
+</div>
+<hr>
+<script src="script.js"></script>
+</body>
+</html>

@@ -55,12 +55,12 @@ const users = [
 ];
 
 //a) відсортувати його за  віком (зростання , а потім окремо спадання)
-users.sort((a, b) => a.age < b.age);
-users.sort((a, b) => a.age > b.age);
+users.sort((a, b) => a.age - b.age);
+users.sort((a, b) => b.age - a.age);
 
 //b) відсортувати його за кількістю знаків в імені  (зростання , а потім окремо спадання)
-users.sort((a, b) => a.name.length > b.name.length);
-users.sort((a, b) => a.name.length < b.name.length);
+users.sort((a, b) => a.name.length - b.name.length);
+users.sort((a, b) => b.name.length - a.name.length);
 
 //c) пройтись по ньому та додати кожному юзеру поле id - яке характеризує унікальний індентифікатор (По якому принципу його створювати - ваше рішення),
 //    та зберегти це в новий масив
@@ -75,7 +75,7 @@ let usersWithId = users.reduce((accumulator, value, index) => {
 }, []);
 
 // d) відсортувати його за індентифікатором
-usersWithId.sort((a, b) => a.id > b.id);
+usersWithId.sort((a, b) => a.id - b.id);
 
 // e) Всі хто одружений мають попасти у новий масив та отрмати квартиру (reduce)
 let usersWithFlat = users.reduce((accumulator, value,) => {
@@ -241,16 +241,16 @@ const usersWithAddress = [
 ];
 
 // -- Відсортувати їх по ID
-usersWithAddress.sort((a, b) => a.id > b.id);
+usersWithAddress.sort((a, b) => a.id - b.id);
 
 //-- Відсортувати їх по ID в зворотньому порядку
-usersWithAddress.sort((a, b) => a.id < b.id);
+usersWithAddress.sort((a, b) => b.id - a.id);
 
 //-- Відсортувати по віку
-usersWithAddress.sort((a, b) => a.age > b.age);
+usersWithAddress.sort((a, b) => a.age - b.age);
 
 // -- Відсортувати по віку в зворотньому порядку
-usersWithAddress.sort((a, b) => a.age < b.age);
+usersWithAddress.sort((a, b) =>b.age - a.age);
 
 //-- Відсорутвати по імені
 usersWithAddress.sort((a, b) => a.name > b.name);
