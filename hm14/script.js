@@ -18,16 +18,17 @@ document.addEventListener("DOMContentLoaded", () => {
         if (document.forms[i].name !== 'saveHistory' && document.forms[i].name !== 'texta' && document.forms[i].name !== 'notes') {
             document.forms[i].oninput = function (e) {
                 data = [];
-                for (let elementsKey in this.elements) {
-                    let value = this.elements[elementsKey].type === 'checkbox' || this.elements[elementsKey].type === 'radio' ?
-                        this.elements[elementsKey].checked : this.elements[elementsKey].value;
-                    if (this.elements[elementsKey].type) {
+                for (let elementsKey of this.elements) {
+                    let value = elementsKey.type === 'checkbox' || elementsKey.type === 'radio' ?
+                        elementsKey.checked : elementsKey.value;
+                    if (elementsKey.type) {
                         data.push({
-                            name: this.elements[elementsKey].name,
-                            type: this.elements[elementsKey].type,
+                            name: elementsKey.name,
+                            type: elementsKey.type,
                             value: value
                         });
                     }
+
                 }
                 localStorage.setItem('formData-' + this.name, JSON.stringify(data));
             }
